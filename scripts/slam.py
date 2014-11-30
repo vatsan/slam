@@ -735,7 +735,7 @@ def computeWeight(particlesObj,k,sensorReadings):
 def initializeCanvas():
     global can,win	
     win = Tk()
-    win.title('vatsan SLAM')
+    win.title('SLAM')
     can = Canvas(win, width=gridSize/cellSize,height=gridSize/cellSize)
     can.pack() 
     #start the showMap method is a new thread
@@ -751,11 +751,10 @@ def showMap(img1):
 
 if(__name__=='__main__'):
     if not sys.argv[1:] or len(sys.argv)<4:
-        print "Usage: vatsanMap.py <datafile [ex:localized.data]> <cell size [ex:20]> <Type (-1/0/1/2,3) [ex:0]>"
-        sys.exit()
-		
-    datafile = sys.argv[1]
-    cellSize = sys.argv[2]	
+        print "Usage: python slam.py <datafile [ex:data/localized.data]> <cell size [ex:20]> <Type (-1/0/1/2,3) [ex:0]>"
+    else:
+        datafile = sys.argv[1]
+        cellSize = sys.argv[2]	
     Type = sys.argv[3]	  
     main(datafile,float(cellSize),Type)
 

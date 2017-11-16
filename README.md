@@ -2,6 +2,8 @@
 
 An implementation of particle filtering algorithm for Simultaneous Localization and Mapping (SLAM)
 
+Update: This was my assignment from grad school in 2007, I have not attempted to run it since and neither should you be attempting to run this code. I uploaded this to GitHub as it brough back pleasant old memories.
+
 ### Usage
 
 ```
